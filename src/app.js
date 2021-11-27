@@ -1,9 +1,10 @@
 const express = require ('express')
 const app = express()
-const PORT = process.env.PORT || 3001
 const hospede = require('../src/controllers/hospedes_controller')
+const cors = require('cors')
 
 app.use(express.json())
+app.use(cors())
 app.use((req, res, next)=>{
   console.log('middleware on')
   next()
@@ -13,6 +14,4 @@ app.use(express.json())
 
 hospede(app)
 
-app.listen(PORT, ()=>{
-    console.log(`Servidor rodando em: http://localhost:${PORT}/`);
-})
+module.exports = app
