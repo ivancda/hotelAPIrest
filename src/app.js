@@ -4,6 +4,12 @@ const PORT = process.env.PORT || 3001
 const hospede = require('../src/controllers/hospedes_controller')
 
 app.use(express.json())
+app.use((req, res, next)=>{
+  console.log('middleware on')
+  next()
+})
+
+app.use(express.json())
 
 hospede(app)
 
