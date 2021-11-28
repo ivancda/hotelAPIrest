@@ -167,7 +167,7 @@ Resposta:
 
 ### **Deletando Hóspede**
 
-DELETE: *URL_BASE/portfolio/{id}*
+DELETE: *URL_BASE/hospede/{id}*
 Resposta:
  ~~~JSON
 {
